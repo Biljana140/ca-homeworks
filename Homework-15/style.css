@@ -1,0 +1,33 @@
+
+.container{
+    margin: auto;
+   
+
+
+
+}
+button{
+    border-radius: 25px;
+    padding: 5px;
+    width: 100px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+input {
+    padding-right: 20px;
+    height: 25px;
+    margin-left: 10px;
+    font-size: 15px;
+  
+    
+}
+p {
+    margin-top: 30px;
+    display: inline-block;
+    font-size: 18px;
+    
+}
+li {
+    padding: 5px;
+    font-size: 18px;
+}

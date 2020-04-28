@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Shopping List</title>
+</head>
+<body>
+
+
+    <div class="container"></div>
+
+<script>
+
+// container where we attach our dynamic elements
+var container = document.querySelector (".container");
+
+
+//create Header
+var header=document.createElement ("h1");
+header.textContent= "My shopping list";
+
+
+//create paragraph
+var enterItems = document.createElement ("p");
+enterItems.textContent = "Enter a new item:";
+
+//create input
+var inputElement = document.createElement ('input')
+inputElement.setAttribute ( 'type', 'text');
+    
+ //create button
+var myButton = document.createElement ('button');
+myButton.setAttribute ( 'type', 'button');
+myButton.textContent = "Add item";
+myButton.addEventListener ( "click", addToCart);
+
+
+//create list
+var listElement = document.createElement ('ul');
+var spanElement= document.createElement ( 'span');
+spanElement.textContent ="Delete";
+
+
+//add created elements to our holder container
+    container.appendChild (header);
+    container.appendChild (enterItems);
+    container.appendChild(inputElement);
+    container.appendChild(myButton);
+    listElement.appendChild ( spanElement);
+    listElement.appendChild ( button);
+    ul.appendChild (listElement);
+
+    
+
+    function addToCart () {
+
+        var itemsList = document.createElement ("li");
+        itemsList.textContent= inputElement. value;
+
+        var deleteButton= document.createElement ("button");
+        deleteButton.setAttribute ( "type", "button");      
+        deleteButton.textContent = "Delete";
+
+        container.appendChild (itemsList);
+        itemsList.appendChild ( deleteButton);
+        inputElement.value = "";
+
+        deleteButton.addEventListener ("click", deleteProducts);
+
+        function deleteProducts () {
+
+            container. removeChild(itemsList);
+        }
+
+    }
+   
+    
+   
+
+</script>
+
+</body>
+</html>
