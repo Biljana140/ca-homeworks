@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    for (var i=1; i<=100; i++){
+        console.log(i);
+      
+      }
+      var sentence="";
+      var myArray=["This", "is","an","amazing","sentence"];
+      
+       for (var i=0; i<myArray.length; i++){
+           if (i===myArray.length -1) {
+               sentence +=myArray[i] + '.';
+           } else {
+               sentence +=myArray[i] + " ";
+           }
+       }
+      
+       console.log(sentence);
+      
+      
+      
+      
+           var myArray = [null, 0, 1, 2, "five", "six", 3, 4, undefined, 5, 7];
+      
+          
+      
+           function mySumCalculator(arr){
+             
+              var sum=0;
+           
+      
+           for (var i = 0; i < arr.length; i++){
+      
+              if ( !arr[i]) {
+                  continue;
+               }
+              if (typeof arr[i]==="string"){
+                  continue;
+              }
+      
+          
+            sum +=arr[i];  
+       }
+           return sum;
+      }
+      console.log(mySumCalculator(myArray));
+      
+      </script>
+      
+      
+      
+
+</body>
+</html>
