@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Homework16_01</title>
+</head>
+<body>
+    <div class="container  bg-light text-dark h-100">
+        <div class="row justify-content-center align-items-center">
+            <h1>Form</h1>
+        </div>
+        <hr>
+        <div class="row justify-content-center align-items-center h-100">
+            <div class= " col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+
+                <div class="form-group">
+                    <select class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <button class=" btn btn-block btn-primary">Primary</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+    <script>
+        var buttonClasses= [
+            "btn-primary",
+            "btn-secondary",
+            "btn-success",
+            "btn-danger" ,      
+            "btn-warning",
+            "btn-info",
+            "btn-dark"            
+            ] 
+
+        var select = document.querySelector ("select");
+        var button = document.querySelector ( "button");
+
+        createOption ( '', "Select class");
+
+
+
+
+        // var option = document. createElement ( "option");
+        // option.value = "";
+        // option.textContent = "Select class";
+        // select.appendChild (option);
+
+        for ( var index = 0; index < buttonClasses.length; index++) {
+            var option = document.createElement ("option");
+            var optionText = buttonClasses [index];
+            option.value = optionText;
+           select.appendChild (option);
+        }
+
+        select. addEventListener ( "change", changeButtonColor);
+
+        function changeButtonColor (){
+            console.log ( button)
+
+            if ( this.value) {
+                button.removeAttribute ('disabled');
+                button.className = " btn btn-block" + this.value;
+                
+            } else {
+                button.setAttribute ( 'disabled', "");
+            }
+        }
+        
+
+
+
+
+
+    </script>
+    
+
+
+
+
+
+
+
+
+</body>
+
+</html>

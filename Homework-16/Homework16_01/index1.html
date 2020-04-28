@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <title>Homework16_01</title>
+</head>
+<body>
+    <body>
+        <main class="bg-light ">
+            <div class="container">
+                <form action="" class="text-center py-3">
+                    <h1>Form</h1>
+                    <hr>
+                    <div class="form-group col-md-6 offset-md-3">
+                        <select class="form-control" name="type" id="type">
+                            <option value="disabled">Select class</option>
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="success">Success</option>
+                            <option value="danger">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="info">Info</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6 offset-md-3">
+                        <button type="button" class="btn btn-block btn-primary">Primary</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    
+        <script>
+            var select = document.querySelector("select");
+            select.addEventListener("change", changeButtonColor);
+    
+            function changeButtonColor() {
+                var selected = this.value;
+                var button = document.querySelector(type="button");
+                
+                function random (number) {
+        return Math.floor(Math.random ()*number);
+    }
+    function bgChangeButton(){
+        var rndCol = 'rgb(' + random (255) + ',' + random (255) + ',' + random (255) +')';
+        return rndCol;
+    
+    var button = document.querySelector(type="button");
+
+    
+        button.onclick=function (e) {
+            e.target.style.backgroundColor = bgChangeButton();
+        }
+    }
+                   
+    
+        
+    
+                if (selected === "disabled") {
+                    button.setAttribute("disabled", "");
+                    console.log(button);
+                } else {
+                    button.removeAttribute("disabled");
+                    button.removeAttribute("class");
+                    button.setAttribute("class", "text-capitalize btn btn-block btn-" + selected);
+                    button.textContent = selected;
+                    console.log(button);
+
+                   
+                }
+            }
+
+            
+            
+               
+        </script>
+    </body>
+    </html>
